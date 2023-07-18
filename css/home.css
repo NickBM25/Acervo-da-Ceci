@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap');
+
+:root {
+    --background: rgb(50, 55, 59);
+    --text: rgb(244, 214, 204);
+    --right_arrow: #77add9;
+    --heart: rgb(193, 73, 83);
+    --right_arrow_hover: #77add97e;
+    --heart_hover: #C149537e;
+    --icon_hover: #eaeaea;
+    --font-family: 'Open Sans', sans-serif;
+}
+
+html * {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+    background: url('../assets/bg.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family);
+    color: var(--text);
+}
+
+header {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    padding: 8% 0 0 0;
+    text-align: center;
+}
+
+.header-img{
+    width: 200px;
+}
+
+main {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardbox{
+    display: flex;
+    height: 50%;
+}
+
+.card {
+    transition: all 0.1s ease-out;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.171) 0px 18px 20px 0px;
+}
+
+.card-out {
+    transform: scale(0.75);
+    filter: blur(5px);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+.next, .love, .loved {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid 
+}
+
+.next {
+    transition: all .5s ease-in-out;
+    color: var(--right_arrow);
+    border-color: var(--right_arrow);
+}
+
+.next:hover {
+    color: var(--icon_hover);
+    background-color: var(--right_arrow_hover);
+    transform: scale(1.1);
+}
+
+.love {
+    transition: all .5s ease-in-out;
+    color: var(--heart);
+    border-color: var(--heart);
+}
+
+.love:hover {
+    color: var(--icon_hover);
+    background-color: var(--heart_hover);
+    transform: scale(1.1);
+}
+
+.loved {
+    transition: all .5s ease-in-out;
+    color: var(--icon_hover);
+    background-color: var(--heart);
+    border-color: var(--heart);
+}
+
+.button {
+    font-size: 1.5rem;
+}
+
+footer {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    transition: all .5s ease-in-out;
+    color: var(--heart);
+    font-family: var(--font-family);
+}
+
+.github:hover {
+    transform: scale(1.3);
+}

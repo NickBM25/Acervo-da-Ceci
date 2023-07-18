@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Acervo da Ceci</title>
+ </head>
+ <body>
+   <header>
+      <h1 class="header-title">Acervo da Ceci</h1>
+      <a href="loved.html">
+         <img class="header-img" src="/assets/cato.png" alt="Imagem de um gatinho, a cecília">
+      </a>
+   </header>
+   <main>
+      <div class="cardbox">
+         <img src="./assets/images/IMG-20230716-WA0018.jpg" alt="" class="card actualcard">
+      </div>
+      <div class="controls">
+         <div onclick="displayNextPhoto();" class="next nextButton">
+            <i class="button fa-solid fa-arrow-right"></i>
+         </div>
+         <div onclick="lovedImg()" class="love loveButton">
+            <i class="button fa-solid fa-heart"></i>
+         </div>
+      </div>
+   </main>
+   <footer>
+      <a href="https://github.com/NickBM" class="github"><i class="fa-brands fa-github"></i> GitHub</a>
+   </footer>
+   <script src="https://kit.fontawesome.com/8b8121f1a7.js" crossorigin="anonymous"></script>
+   <script src="./js/jquery-3.7.0.min.js"></script>
+   <script src="./js/arrayPhotos.js"></script>
+   <script src="./js/nextPhoto.js"></script>
+   <script src="./js/loved.js"></script>
+ </body>
+ </html>

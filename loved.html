@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./css/loved.css">
+</head>
+<body>
+   <header>
+      <h1 class="header-title">Photos that you loved! <3</h1>
+   </header>
+   <main>
+      <div class="cardbox" id="favoritePhotosContainer"></div>
+   </main>
+   <footer>
+      <a class="footer" href="index.html">
+         <h1 class="footer-index-link">Go back</h1>
+      </a>
+   </footer>
+  <script>
+    // Recuperar as fotos favoritadas do LocalStorage
+    var favoritePhotos = localStorage.getItem("savedPhotos");
+    if (favoritePhotos) {
+      favoritePhotos = JSON.parse(favoritePhotos);
+
+      // Exibir as fotos favoritadas
+      var favoritePhotosContainer = document.getElementById("favoritePhotosContainer");
+      for (var i = 0; i < favoritePhotos.length; i++) {
+        var photoURL = favoritePhotos[i];
+
+        // Criar uma tag <img> para exibir a foto favoritada
+        var imgElement = document.createElement("img");
+        imgElement.src = photoURL;
+        imgElement.alt = "Foto favoritada";
+        imgElement.classList.add("card"); // Adicionar a classe "card"
+
+        // Adicionar a imagem ao contêiner
+        favoritePhotosContainer.appendChild(imgElement);
+      }
+    }
+  </script>
+</body>
+</html>
